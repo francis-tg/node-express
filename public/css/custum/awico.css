@@ -37,6 +37,18 @@
     font-size: 3.5rem;
 }
 
+/* icon */
+.react-bg{
+    color: #61DBFB;
+}
+.nodejs-bg{
+color:  #68a063;
+}
+.bot-bg{
+    color: #98BE00;
+}
+/* end icon */
+
 
 @media screen and (max-width:780px){
     #landing{
