@@ -6,14 +6,35 @@
 
 .awico-btn{
     width: 100%;
-    height: 45px;
-    border: 8px solid;
+    height: 60px;
+    border-radius: 20px;
+}
+
+#logo{
+    transform: translateY(180px);
+    width: 600px;
 }
 
 #landing{
-    transform: translateX(270px);
     transform: translateY(270px);
-    margin-left: 5rem;
+    margin-left: 17rem;
+}
+
+#home{
+    height: 100vh;
+    width: 100%;
+    background: url("../../img/img.jpg");
+    background-size: cover;
+}
+#feature{
+    margin: 10px;
+    background-color: aliceblue;
+}
+#feature h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3.5rem;
 }
 
 
@@ -21,7 +42,7 @@
     #landing{
     transform: translateX(0);
     transform: translateY(180px);
-    margin-left: 0;
+    margin-left: -1rem;
     }
     .awico-btn{
     width: 100%;
@@ -29,5 +50,10 @@
     border: 8px solid;
     margin: 10px;
     }
+    #logo{
+        transform: translateY(120px);
+         width: 300px;
+    }
+
 
 }

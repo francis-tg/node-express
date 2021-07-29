@@ -102,8 +102,9 @@ a{
 }
 .slideshow:after {
     content: '';
-    background: transparent url(../images/pattern.png) repeat top left;
+    background: transparent url(../img/img.jpg) repeat top left;
 }
+
 .slideshow li span {
     width: 100%;
     height: 100%;
