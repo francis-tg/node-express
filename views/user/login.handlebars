@@ -1,0 +1,100 @@
+<div class="container mt-5">
+   <div class=" ">
+      <div class="form-box col-md-6 p-4 bg-light">
+         
+              
+     
+           <form action="/user/login" method="post" id="login">
+           <fieldset form="#login" class="p-4">
+               <legend class="text-center">
+                   Connexion
+               </legend>
+                <div class="alert alert-danger" hidden role="alert"></div>
+               <div class="form-group">
+             <label for="">Nom d'utilisateur</label>
+             <input type="text"
+                 class="form-control form-control-sm" name="username" id="" aria-describedby="helpId" placeholder="">
+             <small id="helpId" class="form-text text-muted"></small>
+           </div>
+           <div class="form-group">
+             <label for="">Mot de passe</label>
+             <input type="password"
+                 class="form-control form-control-sm" name="password" id="" aria-describedby="helpId" placeholder="">
+             <small id="helpId" class="form-text text-muted"></small>
+           </div>
+           <button class="btn btn-primary w-100" type="submit">
+               Connexion
+           </button>
+           <div class="border-top mt-2 text-center">
+               <a href="#">Mot de passe oublié?</a> <br>
+               <a href="/user/register/">Créer un compte</a>
+           </div>
+           </fieldset>
+       </form>
+
+        {{!-- <center>
+            <div class="row p-2">
+            <div class="col-2">
+                <button class="btn btn-danger"><i class="fab fa-google    "></i></button>
+            </div>
+             <div class="col-2">
+                <button class="btn btn-primary "><i class="fab fa-facebook    "></i></button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-success "><i class="fab fa-whatsapp    "></i></button>
+            </div>
+        </div>
+        </center> --}}
+      </div>
+
+     
+          
+     
+
+   </div>
+</div>
+
+<style>
+    legend {
+    background-color: #007bf7;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+fieldset{
+    border: 2px solid #007bff
+}
+.form-box{
+    transform: translateX(50%);
+}
+@media screen and (max-width:780px){
+    .form-box{
+    transform: translateX(0);
+   
+    }
+    fieldset{
+        padding: 0;
+    }
+}
+</style>
+<script>
+    $('#login').submit((e)=>{
+         e.preventDefault()
+         $.ajax({
+             type:'POST',
+             url:$(this).action,
+             data:$('#login').serialize(),
+             beforeSend: function(){
+
+             },
+             success:function(data){
+                 if(data === "success"){
+
+                 }else{
+                    $('.alert').attr('hidden',false)
+                    $('.alert').html(data)
+                 }
+             }
+         })
+    })
+</script>
