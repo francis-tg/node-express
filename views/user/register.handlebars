@@ -7,7 +7,7 @@
                <legend class="text-center">
                    Créer un compte
                </legend>
-                <div class="alert alert-danger" hidden role="alert">
+                <div class="alert" hidden role="alert">
               
           </div>
                <div class="form-group">
@@ -18,7 +18,7 @@
            </div>
             <div class="form-group">
              <label for="">Email</label>
-             <input type="email"
+             <input type="text"
                  class="form-control form-control-sm" name="email" aria-describedby="helpId" placeholder="">
              <small id="helpId" class="form-text text-muted"></small>
            </div>
@@ -95,8 +95,10 @@ fieldset{
              },
              success:function(data){
                  if(data === "success"){
-
+                     $('.alert').addClass("alert-success")
+                     $('.alert').html("Votre compte a été créer veuillez vérifier votre boite mail")
                  }else{
+                     $('.alert').addClass("alert-danger")
                     $('.alert').attr('hidden',false)
                     $('.alert').html(data)
                  }
